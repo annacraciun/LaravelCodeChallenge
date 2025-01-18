@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\JokeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Web page route
+Route::get('/', [JokeController::class, 'showJokes']);
+
+// API route to fetch jokes
+Route::get('/api/jokes', [JokeController::class, 'apiJokes']);
