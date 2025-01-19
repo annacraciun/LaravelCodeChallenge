@@ -22,3 +22,43 @@ The application should have the following features
 
 ### Notes
 HTML/CSS/JS styling is not required at all. It doesn't matter how this application looks, only how it functions.
+
+## Implementation Details
+
+### Setup Instructions
+
+Follow these steps to set up the application:
+
+1. #### Clone the Repository
+```bash
+git clone https://github.com/annacraciun/LaravelCodeChallenge.git
+cd LaravelCodeChallenge
+```
+
+2. #### Install Dependencies
+Run the following command to install all required dependencies:
+```bash
+composer install
+```
+3. #### Set Up the Environment
+- Copy the `.env.example` file to `.env`:
+```bash
+cp .env.example .env
+```
+
+- Update the `.env` file with the application-specific settings. For example, set the `JOKE_API_URL`:
+```bash
+JOKE_API_URL=https://official-joke-api.appspot.com/jokes/programming/ten/
+```
+
+- Generate the application key:
+```bash
+php artisan key:generate
+```
+
+4. #### Serve the Application
+Start the development server:
+```bash
+php artisan serve
+```
+The app will be accessible at `http://127.0.0.1:8000`.
