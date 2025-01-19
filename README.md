@@ -62,3 +62,25 @@ Start the development server:
 php artisan serve
 ```
 The app will be accessible at `http://127.0.0.1:8000`.
+
+### Testing Instructions
+To run the tests for this application, follow these steps:
+
+####  1. Create a Testing Environment
+
+- Create a `.env.testing` file for the testing configuration:
+```bash
+cp .env .env.testing
+```
+
+- Update the `.env.testing` file with the testing configurations, such as:
+```bash
+APP_ENV=testing
+APP_DEBUG=true
+JOKE_API_URL=https://official-joke-api.appspot.com/jokes/programming/ten/
+```
+
+####  2. Run the Tests
+```bash
+php artisan test
+```
